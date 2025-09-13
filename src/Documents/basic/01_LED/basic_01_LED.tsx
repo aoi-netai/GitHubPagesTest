@@ -2,7 +2,7 @@ import FooterPageRoute from '../../assets/FooterPageRoute';
 import Header from '../../assets/Header';
 import ComplateButton from '../../assets/ComplateButton';
 import Footer from '../../assets/Footer';
-import style from '../../assets/format.module.css';
+import style from '../../assets/Format.module.css';
 import CppCodeRender from '../../assets/CppCodeRender';
 
 // 画像データ
