@@ -74,7 +74,7 @@ export default function LoginPage() {
                     </label>
                 </div>
 
-                <button type="submit">ログイン</button>
+                <button type="submit" style={{ color: 'black' }}>ログイン</button>
             </form>
         </div>
     )
