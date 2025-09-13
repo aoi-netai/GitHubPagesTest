@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
+import type { FormEvent } from 'react';
 
 
 
@@ -24,7 +24,8 @@ export default function LoginPage() {
     useEffect(checkLoggedIn, [navigate]);
 
     // ログインボタンが押された時の処理
-    function handleLogin() {
+    function handleLogin(e: FormEvent) {
+        e.preventDefault();
 
         // ここにログイン判定を入れる
         if(username === 'user' || password === 'password') {
