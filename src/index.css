@@ -1,0 +1,65 @@
+/* 全体に適用するスタイル */
+/* 基本的なルールを記述して、細かい変更は各ページのCSSで対応する */
+/* !important は使わない */
+
+html, body, #root {
+
+    /* 画面全体を使う */
+    height: 100%;
+
+    /* 画面端からの余白 */
+    margin: 0 20px; 
+
+    /* 背景色と文字色 */
+    background-color: #23272F;
+    color: #FFFFFF;
+}
+
+/* 全要素で文字色を継承して強制 */
+* {
+    color: inherit;
+}
+
+/* 全体の文字サイズを固定 */
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1rem;      
+    list-style-position: inside;  
+    font-size: 20px;
+}
+
+ol {
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;        
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+}
+
+li {
+    margin: 0;
+    padding: 0.1rem 0;
+}
+
+Link {
+
+    font-size: 24px;
+}
