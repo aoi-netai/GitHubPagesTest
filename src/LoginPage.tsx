@@ -25,6 +25,7 @@ export default function LoginPage() {
 
     // ログインボタンが押された時の処理
     function handleLogin(e: FormEvent) {
+
         e.preventDefault();
 
         // ここにログイン判定を入れる
@@ -41,6 +42,14 @@ export default function LoginPage() {
 
             alert('ログインに失敗しました');
         }
+    }
+
+    // ゲストログイン処理を分離
+    function handleGuestLogin() {
+
+        localStorage.setItem('isLoggedIn', 'false');
+
+        navigate('/home');
     }
 
     return(
@@ -75,7 +84,19 @@ export default function LoginPage() {
                 </div>
 
                 <button type="submit" style={{ color: 'black' }}>ログイン</button>
+
             </form>
+            
+                {/* Guest login: immediately navigate to /home and mark as logged in */}
+                <div style={{ marginTop: 12 }}>
+                    <button
+                        type="button"
+                        onClick={handleGuestLogin}
+                        style={{ color: 'black' }}
+                    >
+                        ゲストログイン
+                    </button>
+                </div>
         </div>
     )
 }

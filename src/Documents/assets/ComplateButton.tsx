@@ -1,3 +1,8 @@
+// src/Documents/assets/ComplateButton.tsx
+// 各ページの終了ボタンのコンポーネント
+// GASなどへの通信もここで実装する
+// ログインしていない場合は、ボタンを押せないようにする
+
 import styles from './ComplateButton.module.css';
 
 export default function PageButton({currentPage }: {currentPage: string }) {
@@ -9,13 +14,29 @@ export default function PageButton({currentPage }: {currentPage: string }) {
         alert(message);
     }
 
-    return (
+    // ログインしていない場合
+    if(localStorage.getItem('isLoggedIn') !== 'true') {
 
-        <div>
-            <br />
-            <button className={styles.button} onClick={handleClick}>
-                Page{currentPage}の終了報告を送信
-            </button>
-        </div>
-    )
+        return (
+
+            <div>
+
+            </div>
+        );
+
+    }
+    // ログインしている場合
+    else{
+        
+        return (
+            <div>
+                <br />
+                <button className={styles.button} onClick={handleClick}>
+                    Page{currentPage}の終了報告を送信
+                </button>
+
+            </div>
+        )
+
+    }
 }
