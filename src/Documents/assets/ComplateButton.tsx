@@ -21,6 +21,9 @@ export default function PageButton({currentPage }: {currentPage: string }) {
 
             <div>
 
+                <br />
+                <p> ログインすることでボタンが押せるようになります</p>
+
             </div>
         );
 

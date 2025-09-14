@@ -29,6 +29,7 @@ export default function LoginPage() {
         e.preventDefault();
 
         // ここにログイン判定を入れる
+        // 現在は仮の処理（usernameが'user'またはpasswordが'password'ならログイン成功とする）
         if(username === 'user' || password === 'password') {
 
             // ログインに成功した時の処理
@@ -87,7 +88,7 @@ export default function LoginPage() {
 
             </form>
             
-                {/* Guest login: immediately navigate to /home and mark as logged in */}
+                {/* ゲストログインの仮実装 */}
                 <div style={{ marginTop: 12 }}>
                     <button
                         type="button"
